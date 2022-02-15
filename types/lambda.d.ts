@@ -71,4 +71,4 @@ export interface Response {
 	body: string;
 }
 
-export as namespace Lambda;
+export as namespace HelperLambda;
