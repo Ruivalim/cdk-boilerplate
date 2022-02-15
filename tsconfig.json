@@ -1,30 +1,38 @@
 {
-  "compilerOptions": {
-    "target": "ES2018",
-    "module": "commonjs",
-    "lib": [
-      "es2018"
-    ],
-    "declaration": true,
-    "strict": true,
-    "noImplicitAny": true,
-    "strictNullChecks": true,
-    "noImplicitThis": true,
-    "alwaysStrict": true,
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
-    "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": false,
-    "inlineSourceMap": true,
-    "inlineSources": true,
-    "experimentalDecorators": true,
-    "strictPropertyInitialization": false,
-    "typeRoots": [
-      "./node_modules/@types"
-    ]
-  },
-  "exclude": [
-    "node_modules",
-    "cdk.out"
-  ]
+	"ts-node": {
+		"files": true,
+		"typeRoots": ["./node_modules/@types", "./types"]
+	},
+	"compilerOptions": {
+		"target": "ES2018",
+		"module": "commonjs",
+		"lib": ["es2020", "dom"],
+		"declaration": true,
+		"strict": true,
+		"noImplicitAny": true,
+		"strictNullChecks": true,
+		"noImplicitThis": true,
+		"alwaysStrict": true,
+		"noUnusedLocals": false,
+		"noUnusedParameters": false,
+		"noImplicitReturns": true,
+		"noFallthroughCasesInSwitch": false,
+		"inlineSourceMap": true,
+		"inlineSources": true,
+		"experimentalDecorators": true,
+		"strictPropertyInitialization": false,
+		"typeRoots": ["./node_modules/@types", "./types"],
+		"esModuleInterop": true,
+		"allowJs": true,
+		"checkJs": false,
+		"skipLibCheck": true,
+		"resolveJsonModule": true,
+		"baseUrl": ".",
+		"outDir": "dist",
+		"paths": {
+			"@constructs/*": [ "./lib/constructs/*" ],
+			"@lambdas/*": [ "./lib/lambdas/*" ],
+		}
+	},
+	"exclude": ["cdk.out", "views", "./node_modules/*"]
 }
