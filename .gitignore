@@ -10,3 +10,6 @@ cdk.out
 !prettier.config.js
 
 !types/**
+
+# For mac users
+.DS_Store
